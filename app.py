@@ -55,6 +55,11 @@ def delete_car(id):
     db.commit()
     return jsonify({"message": "Car deleted successfully"})
 
+# Update route
+@app.route('/about')
+def about():
+    return "This is the Car Showroom API. Use /api/carshowroom to interact with the database."
+
 # Run the Flask app
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5001)
